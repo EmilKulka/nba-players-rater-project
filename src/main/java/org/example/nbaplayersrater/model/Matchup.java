@@ -13,16 +13,17 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @ToString
+@Table(name = "matchups")
 public class Matchup {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private Long playerId;
+    @Column(name = "player2_id")
     private Long player2Id;
     private LocalDateTime createdAt;
     @Setter
     @OneToOne
-    @JoinColumn(name = "answer_id")
     private Answer answer;
 
 

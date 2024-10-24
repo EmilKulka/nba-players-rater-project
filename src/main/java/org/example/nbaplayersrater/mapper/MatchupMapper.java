@@ -15,10 +15,10 @@ public interface MatchupMapper {
     @Mapping(source = "player.id", target = "playerId")
     @Mapping(source = "player.name", target = "playerName")
     @Mapping(source = "player.surname", target = "playerSurname")
-    @Mapping(source = "player.imageUrl", target = "playerImgUrl")
+    @Mapping(source = "player.imgUrl", target = "playerImgUrl")
     @Mapping(source = "player2.id", target = "player2Id")
     @Mapping(source = "player2.name", target = "player2Name")
     @Mapping(source = "player2.surname", target = "player2Surname")
-    @Mapping(source = "player2.imageUrl", target = "player2ImgUrl")
+    @Mapping(source = "player2.imgUrl", target = "player2ImgUrl")
     MatchupDto toMatchupDto(Matchup matchup, Player player, Player player2);
 }

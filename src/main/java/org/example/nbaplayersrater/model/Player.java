@@ -1,14 +1,12 @@
 package org.example.nbaplayersrater.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
 @NoArgsConstructor
 @Data
+@Table(name = "players")
 public class Player {
 
     @Id
@@ -18,13 +16,13 @@ public class Player {
     private String surname;
     @Setter
     private int score;
-    private String imageUrl;
+    private String imgUrl;
 
-    public Player(String name, String surname, Integer score, String imageUrl) {
+    public Player(String name, String surname, Integer score, String imgUrl) {
         this.name = name;
         this.surname = surname;
         this.score = score;
-        this.imageUrl = imageUrl;
+        this.imgUrl = imgUrl;
     }
 
 }

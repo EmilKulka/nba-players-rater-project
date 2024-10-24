@@ -34,3 +34,4 @@ build/
 
 src/main/resources/logs
 src/main/resources/nba_players_data.txt
+.env

@@ -12,12 +12,12 @@ import java.util.UUID;
 @NoArgsConstructor
 @Getter
 @ToString
+@Table(name = "answers")
 public class Answer {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     @OneToOne
-    @JoinColumn(name = "matchup_id")
     private Matchup matchup;
     private Long winnerId;
     private Long loserId;
